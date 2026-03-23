@@ -7,7 +7,8 @@
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
-    "db:migrate": "mysql -u root -p < src/db/migrations/001_initial_schema.sql"
+    "db:migrate": "mysql -u root -p < src/db/migrations/002_add_instructors_courses_progress.sql",
+    "db:seed-lessons": "mysql -u root -p < src/db/migrations/003_create_lessons_table.sql"
   },
   "keywords": [],
   "author": "",

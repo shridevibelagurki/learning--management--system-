@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+// Support both Vite (import.meta.env) and Node/Next (process.env) if it ever reverts
+const API_BASE_URL = 
+  (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE_URL) || 
+  (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_API_BASE_URL) || 
+  'http://localhost:5000';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
