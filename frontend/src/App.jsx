@@ -7,6 +7,7 @@ import About from './pages/About';
 import Materials from './pages/Materials';
 import Subjects from './pages/Subjects';
 import SubjectDetail from './pages/SubjectDetail';
+import Login from './pages/Login';
 import './index.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/materials" element={<Materials />} />
+            <Route path="/auth/login" element={<Login />} />
             <Route path="/subjects" element={<Subjects />} />
             <Route path="/subjects/:subjectId" element={<SubjectDetail />} />
           </Routes>
