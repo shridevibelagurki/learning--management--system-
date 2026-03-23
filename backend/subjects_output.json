@@ -1,0 +1,138 @@
+[
+  {
+    "id": 5,
+    "title": "Python Programming"
+  },
+  {
+    "id": 6,
+    "title": "C Programming"
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning"
+  },
+  {
+    "id": 8,
+    "title": "Artificial Intelligence"
+  },
+  {
+    "id": 9,
+    "title": "Data Structures & Algorithms"
+  },
+  {
+    "id": 10,
+    "title": "Database Management Systems"
+  },
+  {
+    "id": 11,
+    "title": "Operating Systems"
+  },
+  {
+    "id": 12,
+    "title": "Computer Networks"
+  },
+  {
+    "id": 13,
+    "title": "Web Development"
+  },
+  {
+    "id": 14,
+    "title": "Java Programming"
+  },
+  {
+    "id": 15,
+    "title": "Cyber Security"
+  },
+  {
+    "id": 16,
+    "title": "Cloud Computing"
+  },
+  {
+    "id": 17,
+    "title": "DevOps"
+  },
+  {
+    "id": 18,
+    "title": "Mobile App Development"
+  },
+  {
+    "id": 19,
+    "title": "Blockchain Technology"
+  },
+  {
+    "id": 20,
+    "title": "Python Programming (English)"
+  },
+  {
+    "id": 21,
+    "title": "Python Programming (Kannada)"
+  },
+  {
+    "id": 22,
+    "title": "Java Programming (English)"
+  },
+  {
+    "id": 23,
+    "title": "Java Programming (Kannada)"
+  },
+  {
+    "id": 24,
+    "title": "Data Structures & Algorithms"
+  },
+  {
+    "id": 25,
+    "title": "Machine Learning"
+  },
+  {
+    "id": 26,
+    "title": "Artificial Intelligence"
+  },
+  {
+    "id": 27,
+    "title": "Web Development"
+  },
+  {
+    "id": 28,
+    "title": "SQL & Databases"
+  },
+  {
+    "id": 29,
+    "title": "Operating Systems"
+  },
+  {
+    "id": 30,
+    "title": "Computer Networks"
+  },
+  {
+    "id": 31,
+    "title": "Cyber Security"
+  },
+  {
+    "id": 32,
+    "title": "Cloud Computing"
+  },
+  {
+    "id": 33,
+    "title": "DevOps"
+  },
+  {
+    "id": 34,
+    "title": "Web Development"
+  },
+  {
+    "id": 35,
+    "title": "Operating Systems"
+  },
+  {
+    "id": 36,
+    "title": "Cloud Computing"
+  },
+  {
+    "id": 37,
+    "title": "Data Structures & Algorithms"
+  },
+  {
+    "id": 38,
+    "title": "Machine Learning"
+  }
+]
