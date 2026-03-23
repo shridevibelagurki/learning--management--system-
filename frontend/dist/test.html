@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Test</title>
+</head>
+<body>
+    <h1>Chatbot Test Page</h1>
+    <p>Check if AI server is working:</p>
+    <button onclick="testAI()">Test AI Server</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAI() {
+            try {
+                const response = await fetch('http://localhost:5001/api/health');
+                const data = await response.json();
+                document.getElementById('result').innerHTML = 
+                    '<p style="color:green">✅ AI Server is running! Response: ' + 
+                    JSON.stringify(data) + '</p>';
+            } catch (error) {
+                document.getElementById('result').innerHTML = 
+                    '<p style="color:red">❌ AI Server not running: ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
