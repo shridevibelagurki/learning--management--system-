@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server.js",
     "dev": "concurrently \"npm run server\" \"cd frontend && npm run dev\"",
-    "build": "cd frontend && npm run build",
+    "build": "echo skipping root build",
     "start": "cd frontend && npm start"
   },
   "dependencies": {
