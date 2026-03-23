@@ -1,7 +1,11 @@
+import React from 'react';
+import AIChatbot from './components/AIChatbot';
+
 function App() {
   return (
-    <div style={{ color: "white", padding: "20px" }}>
-      <h1>APP IS WORKING ✅</h1>
+    <div>
+      <h1>CourseLit</h1>
+      <AIChatbot />
     </div>
   );
 }
