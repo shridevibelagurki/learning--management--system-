@@ -15,6 +15,7 @@ const errorHandler_1 = require("./middleware/errorHandler");
 // Import routes
 const auth_routes_1 = __importDefault(require("./modules/auth/auth.routes"));
 const subject_routes_1 = __importDefault(require("./modules/subjects/subject.routes"));
+const progress_routes_1 = __importDefault(require("./modules/progress/progress.routes"));
 const app = (0, express_1.default)();
 // Middleware
 app.use((0, helmet_1.default)());
@@ -32,6 +33,7 @@ app.use('/api/courses', course_routes_1.default);
 // Routes
 app.use('/api/auth', auth_routes_1.default);
 app.use('/api/subjects', subject_routes_1.default);
+app.use('/api/progress', progress_routes_1.default);
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running' });
 });

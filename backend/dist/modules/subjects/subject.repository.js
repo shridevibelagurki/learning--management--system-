@@ -8,8 +8,8 @@ const database_1 = __importDefault(require("../../config/database"));
 class SubjectRepository {
     async findAll() {
         try {
-            const [rows] = await database_1.default.execute(`SELECT id, title, description, instructor_id, category, thumbnail_url, 
-                slug, level, price, is_published, language, language_pair_id
+            const [rows] = await database_1.default.execute(`SELECT id, title, description, instructor_id, instructor_name, category, thumbnail_url, 
+                slug, level, price, is_published, language, language_pair_id, total_lessons, duration_hours
          FROM subjects 
          WHERE is_published = 1`);
             return rows;
@@ -21,8 +21,8 @@ class SubjectRepository {
     }
     async findById(id) {
         try {
-            const [rows] = await database_1.default.execute(`SELECT id, title, description, instructor_id, category, thumbnail_url, 
-                slug, level, price, is_published, language, language_pair_id
+            const [rows] = await database_1.default.execute(`SELECT id, title, description, instructor_id, instructor_name, category, thumbnail_url, 
+                slug, level, price, is_published, language, language_pair_id, total_lessons, duration_hours
          FROM subjects 
          WHERE id = ?`, [id]);
             return rows[0] || null;
@@ -64,6 +64,19 @@ class SubjectRepository {
                 }
             }
             return languages;
+        }
+        catch (error) {
+            console.error('Repository error:', error);
+            throw error;
+        }
+    }
+    async findLessonsBySubjectId(subjectId) {
+        try {
+            const [rows] = await database_1.default.execute(`SELECT id, title, video_url, duration_minutes, order_index 
+         FROM lessons 
+         WHERE subject_id = ? 
+         ORDER BY order_index ASC`, [subjectId]);
+            return rows;
         }
         catch (error) {
             console.error('Repository error:', error);

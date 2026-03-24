@@ -21,12 +21,13 @@ class SubjectController {
     async getSubjectById(req, res, next) {
         try {
             const { subjectId } = req.params;
-            console.log('Getting subject by ID:', subjectId);
+            const userId = req.user?.userId; // Get user ID from token
+            console.log('Getting subject by ID:', subjectId, 'for user:', userId);
             const id = typeof subjectId === 'string' ? parseInt(subjectId) : parseInt(subjectId[0]);
             if (isNaN(id)) {
                 return res.status(400).json({ message: 'Invalid subject ID' });
             }
-            const subject = await subjectService.getSubjectById(id);
+            const subject = await subjectService.getSubjectById(id, userId);
             res.json(subject);
         }
         catch (error) {
